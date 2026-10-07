@@ -1,1 +1,371 @@
+/*estilo común de todas las páginas*/
+
+/*titulo h1*/
+@font-face {
+    font-family: "Fink";
+    src: url(../fonts/FinkHeavy.woff2);
+}
+
+/*indice nav*/
+@font-face {
+    font-family: "VFC";
+    src: url(../fonts/vfcRuiz.woff2);
+}
+
+/* ========================= BODY ========================= */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    background-image: url("../images/background.jpeg");
+    background-repeat: repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    overflow-x: clip;
+}
+
+/* ========================= ENCABEZADO ========================= */
+header {
+    width: 100%;
+    /*TRBL top right bottom left*/
+    padding: 30px 0 30px 0;
+}
+
+.titulo-banner {
+    width: 700px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.titulo-banner img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.titulo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /*translate (x, y)*/
+    transform: translate(-50%, -50%);
+    margin: 0;
+    z-index: 1;
+    
+    font-size: 5rem;
+    font-family: "Fink";
+    color: #2f4a2e;
+    text-decoration: underline dotted #7a2e1e 3px;
+
+    transition: color 0.2s ease;
+}
+
+.titulo:hover {
+    color: #537251;
+}
+
+.titulo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ========================= NAV ========================= */
+
+.indice-principal {
+    /*paleta*/
+    --rojo: #7a2e1e;
+    --crema: #f1e5cb;
+    --verde: #2f4a2e;
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 700px;
+    margin: 30px auto 0;
+}
+
+.indice-principal a {
+    padding: 8px 24px 8px 28px;
+    font-size: 1.2rem;
+    font-family: "VFC";
+    color: var(--verde);
+    text-decoration: none;
+
+    /*forma de etiqueta*/
+    /*https://bennettfeely.com/clippy/*/
+    clip-path: polygon(0% 0%, 88% 0, 100% 50%, 88% 100%, 0% 100%);
+
+    /*
+    background: radial-gradient(
+        [<forma>] [<tamaño>] [at <posición>],
+        <parada-de-color>,
+        <parada-de-color>,
+        ...
+        );
+    */
+    background: radial-gradient(circle 5px at 15px 50%, transparent 99%, var(--crema));
+    transition: color 0.2s ease;
+}
+
+.indice-principal a.pag-activa {text-decoration: underline dotted var(--crema) 3px;}
+
+.indice-principal a:hover,
+.indice-principal a.pag-activa {
+    background: radial-gradient(circle 5px at 15px 50%, transparent 99%, var(--rojo));
+    color: var(--crema);
+}
+
+/* ======================================================= */
+
+
+/* ========================= footer ========================= */
+footer {
+    width: 100%;
+    box-sizing: border-box;
+    /*TRBL top right bottom left*/
+    padding: 30px 20px;
+    background-color: #2f4a2e;
+    border-top: 2px solid #537251;
+    box-shadow: inset 0 4px 0 -2px #c9a961;
+}
+
+.footer-contenido {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+}
+
+.footer-marca {
+    margin-bottom: 14px;
+    font: 1.6rem "Fink";
+    color: #f4e8cf;
+    text-decoration: underline dotted #c9a961 2px;
+}
+
+.footer-enlaces {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 26px;
+}
+
+.footer-enlaces a {
+    font: 1rem "VFC";
+    color: #f4e8cf;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-enlaces a:hover {color: #c9a961;}
+
+footer hr {
+    margin: 18px auto;
+    border: 0;
+    border-top: 1px solid rgba(201, 169, 97, 0.35);
+}
+
+.footer-copy {
+    font: 0.9rem "VFC";
+    line-height: 1.6;
+    color: #81a489;
+}
+
+.footer-copy strong {color: #f4e8cf;}
+/* ======================================================= */
+
+
+/* ========================= separadores ========================= */
+.separador {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 28px 0;
+    color: #7a2e1e;
+}
+
+/* lineas de los lados */
+.separador::before,
+.separador::after {
+    content: "";
+    flex: 1;
+    height: 4px;
+    border-top: 2px solid #7a2e1e;
+    border-bottom: 2px solid #7a2e1e;
+    opacity: 0.70;
+}
+
+.separador span {
+    font-size: 1rem;
+    line-height: 1;
+    color: #7a2e1e;
+}
+
+/* ========================= validaciones W3C ========================= */
+
+.validaciones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 22px;
+}
+
+.validacion {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 6px 14px;
+
+    font: 0.8rem "Fink";
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    color: #c9a961;
+    background: rgba(201, 169, 97, 0.08);
+    border: 1px solid rgba(201, 169, 97, 0.4);
+    border-radius: 20px;
+
+    transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.validacion:hover {
+    background: #7a2e1e;
+    color: #f4e8cf;
+    border-color: #7a2e1e;
+}
+
+.validacion-icono {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #2f4a2e;
+    background: #c9a961;
+
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.validacion:hover .validacion-icono {
+    background: #f4e8cf;
+    color: #7a2e1e;
+}
+
+
+/* =====================================================================
+   RESPONSIVE TABLET Y MÓVIL */
+@media (max-width: 900px) {
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    body {
+        background-attachment: scroll;
+        background-size: 560px auto;
+    }
+
+    body > header {
+        padding: 18px 0 8px;
+    }
+
+    body > header br {
+        display: none;
+    }
+
+    .titulo-banner {
+        width: 92%;
+        max-width: 700px;
+    }
+
+    .titulo {
+        white-space: nowrap;
+        text-decoration-thickness: 2px;
+    }
+
+    .indice-principal {
+        width: 100%;
+        max-width: 700px;
+        margin-top: 18px;
+        padding: 0 14px;
+        flex-wrap: wrap;
+        gap: 10px 12px;
+    }
+
+    .indice-principal a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 8px 22px 8px 26px;
+        font-size: 1.05rem;
+    }
+
+    body > header .separador {
+        margin: 22px 14px 0;
+    }
+
+    body > footer {
+        padding: 26px 16px;
+    }
+
+    .footer-marca {
+        font-size: 1.4rem;
+    }
+
+    .footer-enlaces {
+        gap: 0 6px;
+    }
+
+    .footer-enlaces a {
+        padding: 12px 8px;
+    }
+}
+
+@media (max-width: 760px) {
+    .titulo {
+        font-size: 10.4vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .indice-principal {
+        gap: 8px;
+        padding: 0 10px;
+    }
+
+    .indice-principal a {
+        padding: 8px 20px 8px 24px;
+        font-size: 1rem;
+    }
+
+    .footer-enlaces {
+        gap: 0 2px;
+    }
+
+    .footer-enlaces a {
+        padding: 12px 6px;
+        font-size: 0.95rem;
+    }
+}
 
