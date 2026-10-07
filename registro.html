@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registro | ArtropoPedia</title>
+    <meta name="description" content="Crea tu cuenta en ArtropoPedia y empieza a compartir tus capturas con la comunidad de entomólogos y aficionados.">
+    <meta name="author" content="Ainhoa Rey Cuesta">
+
+    <!--estilos-->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/registro.css">
+
+    <!--favicon-->
+    <link rel="icon" href="images/logo.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <!--====================================================================================-->
+    <header>
+
+        <div class="titulo-banner">
+            <img src="images/banner.png" alt="etiquetaAPedia">
+            <h1 class="titulo"><a href="index.html">ArtropoPedia</a></h1>
+        </div>
+
+        <nav class="indice-principal">
+            <a href="index.html">Inicio</a>
+            <a href="foro.html">Foro</a>
+            <a href="enciclopedia.html">Enciclopedia</a>
+            <a href="capturas.html">Capturas</a>
+            <a href="registro.html" class="pag-activa">Registro</a>
+        </nav>
+
+        <br>
+        <div class="separador"><span>❦</span></div>
+
+    </header>
+
+    <!--====================================================================================-->
+    <main>
+    <!-- ============ izquierda ============ -->
+        <aside class="columna-izq">
+
+            <div class="panel">
+                <h2 class="panel-titulo">Antes de empezar</h2>
+                <ol class="panel-lista">
+                    <li><p><span>Respeto</span><em>Trata bien a los demás miembros</em></p></li>
+                    <li><p><span>Capturas propias</span><em>Sube solo fotos hechas por ti</em></p></li>
+                    <li><p><span>Cuidado del bicho</span><em>Observa sin dañar al animal</em></p></li>
+                    <li><p><span>Identificación</span><em>Pregunta en el foro si dudas</em></p></li>
+                </ol>
+                <a href="foro.html" class="panel-ver-mas">IR AL FORO →</a>
+            </div>
+
+            <section class="dato">
+                <h2 class="dato-etiqueta">¿Sabías que...?</h2>
+                <img class="dato-img" src="images/escarabajo.png" alt="Escarabajo">
+                <p class="dato-texto">
+                    El <em>escarabajo pelotero</em> puede orientarse usando la Vía Láctea
+                    en noches sin luna.
+                </p>
+            </section>
+
+        </aside>
+
+        <!-- ============ centro ============ -->
+        <div class="contenedorForm">
+
+            <article class="formulario">
+                <img class="sello" src="images/sello.png" alt="sello abeja">
+                <h2 class="form-titulo">Únete a <span>ArtropoPedia</span></h2>
+                <p class="form-intro">
+                    Crea tu cuenta en un minuto y empieza a compartir tus capturas.
+                    Los campos marcados con <span>*</span> son obligatorios.
+                </p>
+
+                <form name="formulario-registro" method="post" data-netlify="true">
+
+                    <!--datos de la cuenta -->
+                    <fieldset>
+                        <legend>Datos de la cuenta</legend>
+
+                        <p>
+                            <label for="nombre">Nombre y apellidos *</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ej: Ainhoa Rey" required autofocus>
+                        </p>
+
+                        <p>
+                            <label for="usuario">Nombre de usuario *</label>
+                            <input type="text" id="usuario" name="usuario" placeholder="Ej: areycuesta" required>
+                        </p>
+
+                        <p>
+                            <label for="email">Correo electrónico *</label>
+                            <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+                        </p>
+
+                        <p>
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="600 000 000">
+                        </p>
+
+                        <p>
+                            <label for="psw">Contraseña *</label>
+                            <input type="password" id="psw" name="psw" minlength="8" required>
+                        </p>
+
+                        <p>
+                            <label for="psw2">Repite la contraseña *</label>
+                            <input type="password" id="psw2" name="psw2" minlength="8" required>
+                        </p>
+                    </fieldset>
+
+                    <!-- perfil -->
+                    <fieldset>
+                        <legend>Tu perfil entomológico</legend>
+
+                        <p>
+                            <label for="nacimiento">Fecha de nacimiento</label>
+                            <input type="date" id="nacimiento" name="nacimiento">
+                        </p>
+
+                        <p class="grupo-titulo">¿Cómo te defines? *</p>
+                        <ul class="opciones">
+                            <li>
+                                <label for="nivel1">
+                                    <input type="radio" id="nivel1" name="nivel" value="aficionado" checked>
+                                    Aficionado
+                                </label>
+                            </li>
+                            <li>
+                                <label for="nivel2">
+                                    <input type="radio" id="nivel2" name="nivel" value="estudiante">
+                                    Estudiante
+                                </label>
+                            </li>
+                            <li>
+                                <label for="nivel3">
+                                    <input type="radio" id="nivel3" name="nivel" value="entomologo">
+                                    Entomólogo profesional
+                                </label>
+                            </li>
+                        </ul>
+
+                        <p>
+                            <label for="zona">¿Desde dónde capturas?</label>
+                            <select id="zona" name="zona">
+                                <option value="">- selecciona -</option>
+                                <optgroup label="Norte">
+                                    <option value="pais-vasco">País Vasco</option>
+                                    <option value="cantabria">Cantabria</option>
+                                    <option value="asturias">Asturias</option>
+                                    <option value="galicia">Galicia</option>
+                                </optgroup>
+                                <optgroup label="Centro">
+                                    <option value="madrid">Madrid</option>
+                                    <option value="castilla">Castilla</option>
+                                </optgroup>
+                                <optgroup label="Sur y costa">
+                                    <option value="andalucia">Andalucía</option>
+                                    <option value="levante">Levante</option>
+                                    <option value="islas">Islas</option>
+                                </optgroup>
+                            </select>
+                        </p>
+
+                        <p class="grupo-titulo">¿Qué te interesa más?</p>
+                        <ul class="opciones">
+                            <li>
+                                <label for="int1">
+                                    <input type="checkbox" id="int1" name="insectos" value="insectos">
+                                    Insectos
+                                </label>
+                            </li>
+                            <li>
+                                <label for="int2">
+                                    <input type="checkbox" id="int2" name="aracnidos" value="aracnidos">
+                                    Arácnidos
+                                </label>
+                            </li>
+                            <li>
+                                <label for="int3">
+                                    <input type="checkbox" id="int3" name="miriopodos" value="miriopodos">
+                                    Miriópodos
+                                </label>
+                            </li>
+                        </ul>
+
+                        <p>
+                            <label for="mensaje">Preséntate a la comunidad</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" cols="50" minlength="10" maxlength="300" placeholder="Cuéntanos qué has cazado con la cámara últimamente..."></textarea>
+                        </p>
+                    </fieldset>
+
+                    <!-- envío -->
+                    <p class="acepto">
+                        <label for="politica">
+                            <input type="checkbox" id="politica" name="politica" value="si" required>
+                            Acepto la política de privacidad *
+                        </label>
+                    </p>
+
+                    <div class="botones">
+                        <input type="submit" class="form-boton" value="REGISTRARME">
+                        <input type="reset" class="form-boton secundario" value="BORRAR">
+                    </div>
+
+                </form>
+
+                <p class="form-pie">¿Ya tienes cuenta? <a href="foro.html">Entra al foro</a></p>
+            </article>
+
+        </div>
+
+    </main>
+
+    <!--====================================================================================-->
+    <footer>
+        <div class="footer-contenido">
+            <p class="footer-marca">ArtropoPedia</p>
+
+            <nav class="footer-enlaces">
+                <a href="index.html">Inicio</a>
+                <a href="foro.html">Foro</a>
+                <a href="enciclopedia.html">Enciclopedia</a>
+                <a href="capturas.html">Capturas</a>
+                <a href="registro.html">Registro</a>
+            </nav>
+            <hr>
+            <p class="footer-copy">
+                &copy; 2026 ArtropoPedia &middot; Hecho por <strong>Ainhoa Rey Cuesta</strong><br>
+                <em>Guía de artrópodos para aficionados y entomólogos de España</em>
+            </p>
+            <br>
+            <p>
+                <a href="https://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px"
+                src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!"></a>
+            </p>
+
+        </div>
+    </footer>
+
+    <!--====================================================================================-->
+</body>
+
+</html>

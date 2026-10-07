@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Foro | ArtropoPedia</title>
+    <meta name="description" content="Foro de ArtropoPedia: pregunta, identifica y comenta artrópodos con otros aficionados.">
+    <meta name="author" content="Ainhoa Rey Cuesta">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/foro.css">
+
+    <link rel="icon" href="images/logo.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- ============ HEADER ============ -->
+    <header>
+        <div class="titulo-banner">
+            <img src="images/banner.png" alt="etiquetaAPedia">
+            <h1 class="titulo"><a href="index.html">ArtropoPedia</a></h1>
+        </div>
+
+        <nav class="indice-principal">
+            <a href="index.html">Inicio</a>
+            <a href="foro.html" class="pag-activa">Foro</a>
+            <a href="enciclopedia.html">Enciclopedia</a>
+            <a href="capturas.html">Capturas</a>
+            <a href="registro.html">Registro</a>
+        </nav>
+
+        <br>
+        <div class="separador"><span>❦</span></div>
+    </header>
+
+    <main>
+
+        <!-- ===== izq ===== -->
+        <aside class="panel">
+            <h2 class="panel-titulo">Hilos recientes</h2>
+
+            <ol class="panel-lista">
+                <li><a href="#hilo1"><span>Escarabajo verde</span><em>Mari · 3 respuestas</em></a></li>
+                <li><a href="#hilo2"><span>Cómo fotografiar arañas</span><em>Selene · 5 respuestas</em></a></li>
+                <li><a href="#hilo3"><span>Material de campo</span><em>Unai · 8 respuestas</em></a></li>
+            </ol>
+
+            <a href="capturas.html" class="panel-ver-mas">Ver más hilos →</a>
+        </aside>
+
+        <!-- ===== centro ===== -->
+        <section class="contenedorHilos">
+
+            <header class="informacion">
+                <img class="sello" src="images/sello.png" alt="sello abeja">
+                <h2 class="info-titulo">Foro de <span>ArtropoPedia</span></h2>
+
+                <p class="info-texto">
+                    Aquí la comunidad <strong>identifica</strong>, pregunta y comparte consejos.
+                    <span>Antes de abrir un hilo</span>, busca si alguien ya ha resuelto <em>tu duda</em>.
+                </p>
+            </header>
+
+            <article id="hilo1" class="publicacion">
+                <header>
+                    <h3>¿Qué escarabajo verde es este?</h3>
+                    <p class="autor"><span>Mari</span> · hace 2 h</p>
+                </header>
+
+                <img src="images/capturas/cetonia.jpg" alt="cetonia dorada">
+
+                <p>
+                    Lo encontré en un camino de Bizkaia. Mide unos <strong>2 cm</strong> y tiene el
+                    caparazón <em>verde metálico</em>. ¿Alguien me ayuda a identificarlo?
+                </p>
+
+                <section class="respuestas">
+                    <h4>Respuestas</h4>
+                    <p>
+                        <span class="autor"><strong>Andrés:</strong></span>
+                        Parece una cetonia dorada. Consulta la
+                        <a href="enciclopedia.html#insectos">enciclopedia</a>.
+                    </p>
+                </section>
+
+                <footer>
+                    <a href="#responder" class="btn-responder">Responder</a>
+                </footer>
+            </article>
+
+            <article id="hilo2" class="publicacion">
+                <header>
+                    <h3>Cómo fotografiar arañas</h3>
+                    <p class="autor"><span>Selene</span> · ayer</p>
+                </header>
+
+                <p>Mi método para que las arañas lobo no se escapen del encuadre:</p>
+                <ol>
+                    <li>Acércate despacio y sin sombra sobre el animal.</li>
+                    <li>Usa luz natural, nunca flash directo.</li>
+                    <li>Enfoca a los ojos y dispara en ráfaga.</li>
+                </ol>
+
+                <footer>
+                    <a href="#responder" class="btn-responder">Responder</a>
+                </footer>
+            </article>
+
+            <article id="hilo3" class="publicacion">
+                <header>
+                    <h3>Material de campo</h3>
+                    <p class="autor"><span>Unai</span> · hace 2 días</p>
+                </header>
+
+                <p>Mi lista para las salidas de fin de semana:</p>
+                <ul>
+                    <li>Observación
+                        <ul>
+                            <li>Lupa de 10 aumentos</li>
+                            <li>Prismáticos</li>
+                        </ul>
+                    </li>
+                    <li>Captura sin daño
+                        <ul>
+                            <li>Botes de cristal con tapa agujereada</li>
+                            <li>Pincel suave</li>
+                            <li>Red entomológica</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <footer>
+                    <a href="#responder" class="btn-responder">Responder</a>
+                </footer>
+            </article>
+
+            <p class="foro-pie">
+                ¿Quieres ser parte de nuestra comunidad?
+                <a href="registro.html" target="_blank" rel="noopener">Crea tu cuenta</a>.
+            </p>
+
+        </section>
+
+        <!-- ===== der ===== -->
+        <aside class="panel panel-der">
+
+            <section class="bloque">
+                <h3 class="panel-titulo">Buscar</h3>
+                <input type="search" class="buscador" placeholder="Palabra clave...">
+            </section>
+
+            <section class="bloque">
+                <h3 class="panel-titulo">Por género</h3>
+                <ul class="filtros">
+                    <li><a href="#">Insectos <em>142</em></a></li>
+                    <li><a href="#">Arácnidos <em>87</em></a></li>
+                    <li><a href="#">Miriópodos <em>23</em></a></li>
+                    <li><a href="#">Crustáceos <em>11</em></a></li>
+                </ul>
+            </section>
+
+            <section class="bloque">
+                <h3 class="panel-titulo">Etiquetas</h3>
+                <div class="tags">
+                    <a href="#" class="tag">#escarabajo</a>
+                    <a href="#" class="tag">#araña</a>
+                    <a href="#" class="tag">#mariposa</a>
+                    <a href="#" class="tag">#libélula</a>
+                    <a href="#" class="tag">#fotografía</a>
+                    <a href="#" class="tag">#identificación</a>
+                </div>
+            </section>
+
+            <section class="bloque">
+                <h3 class="panel-titulo">Popularidad</h3>
+                <ul class="filtros">
+                    <li><a href="#">Más recientes</a></li>
+                    <li><a href="#">Más respondidos</a></li>
+                    <li><a href="#">Más vistos</a></li>
+                </ul>
+            </section>
+
+        </aside>
+
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer>
+        <div class="footer-contenido">
+            <p class="footer-marca">ArtropoPedia</p>
+
+            <nav class="footer-enlaces">
+                <a href="index.html">Inicio</a>
+                <a href="foro.html">Foro</a>
+                <a href="enciclopedia.html">Enciclopedia</a>
+                <a href="capturas.html">Capturas</a>
+                <a href="registro.html">Registro</a>
+            </nav>
+            <hr>
+            <p class="footer-copy">
+                &copy; 2026 ArtropoPedia &middot; Hecho por <strong>Ainhoa Rey Cuesta</strong><br>
+                <em>Guía de artrópodos para aficionados y entomólogos de España</em>
+            </p>
+            <br>
+            <p>
+                <a href="https://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px"
+                src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!"></a>
+            </p>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
