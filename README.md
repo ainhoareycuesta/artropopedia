@@ -2,4 +2,4 @@
 Página web estática dedicada a los artrópodos.
 
 Página web con host "Netlify":
-# [ArtropoPedia](artropopedia.netlify.app)
+# [ArtropoPedia](https://artropopedia.netlify.app/)
