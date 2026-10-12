@@ -32,8 +32,7 @@ cd artropopedia
 ├── index.html, enciclopedia.html, capturas.html, foro.html, registro.html
 ├── css/        # hojas de estilo
 ├── fonts/      # tipografías
-├── images/     # imágenes y capturas
-└── docs/       # documentación del proyecto (uso de IA, URIs)
+└── images/     # imágenes y capturas
 ```
 
 ## Contexto
