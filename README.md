@@ -4,8 +4,6 @@ Guía ilustrada de artrópodos para aficionados y entomólogos de España: insec
 
 **[Ver la web →](https://artropopedia.netlify.app/)**
 
-![Captura de ArtropoPedia](images/captura-inicio.png)
-
 ## Qué incluye
 
 - **Inicio:** últimas capturas y acceso rápido a las secciones.
